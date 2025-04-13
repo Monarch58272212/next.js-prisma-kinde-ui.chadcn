@@ -20,11 +20,7 @@ async function getData(userId: string) {
 export default async function Dashboard() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  if (!user?.id) {
-    throw new Error("User not authenticated or missing ID");
-  }
-
-  const data = await getData(user.id);
+  const data = user?.id ? await getData(user.id) : [];
 
   return (
     <div>
