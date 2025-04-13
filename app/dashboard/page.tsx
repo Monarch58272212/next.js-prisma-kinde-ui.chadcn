@@ -20,7 +20,11 @@ async function getData(userId: string) {
 export default async function Dashboard() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  const data = user?.id ? await getData(user.id) : [];
+  if (!user) {
+    return <div>Error: User not found.</div>;
+  }
+
+  const data = await getData(user.id);
 
   return (
     <div>
