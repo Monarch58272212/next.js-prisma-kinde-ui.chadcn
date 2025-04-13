@@ -20,6 +20,19 @@ async function getData(userId: string) {
 export default async function Dashboard() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
+
+  if (!user) {
+    return (
+      <div className="text-center mt-10">
+        <h2 className="text-2xl font-semibold">
+          You must be signed in to view your dashboard.
+        </h2>
+        <Link href="/" className={buttonVariants({ variant: "secondary" })}>
+          Go to Home
+        </Link>
+      </div>
+    );
+  }
   const data = await getData(user.id);
 
   return (
