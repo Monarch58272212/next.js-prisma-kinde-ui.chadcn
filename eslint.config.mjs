@@ -15,7 +15,7 @@ const compat = new FlatCompat({
 
 // Pag-extend ng ESLint configuration
 const eslintConfig = [
-  ...compat.extends(["next/core-web-vitals", "next/typescript"]),
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
 // Pag-export ng config para magamit sa ESLint
