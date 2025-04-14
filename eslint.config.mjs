@@ -19,4 +19,4 @@ const eslintConfig = [
 ];
 
 // Pag-export ng config para magamit sa ESLint
-export default eslintConfig;
+module.exports = eslintConfig;
