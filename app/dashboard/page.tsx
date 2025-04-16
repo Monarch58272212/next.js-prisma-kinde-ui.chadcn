@@ -24,7 +24,7 @@ export default async function Dashboard() {
     return <div>Error: User not found.</div>;
   }
 
-  const data = await getData(user.id);
+  const data = await getData(user?.id);
 
   return (
     <div>
