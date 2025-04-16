@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
         protocol: "https",
         port: "",
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+        protocol: "https",
+        port: "",
+      },
+      {
+        hostname: "plus.unsplash.com",
+        protocol: "https",
+        port: "",
+      },
     ],
   },
 };
