@@ -27,7 +27,7 @@ export async function Navbar() {
       <div className="flex items-center justify-between gap-6">
         <Link href={"/"}>
           <h1 className="text-black text-3xl font-bold">
-            Blog<span className="text-blue-600">Monarch</span>
+            Blog<span className="text-blue-600">Christine</span>
           </h1>
         </Link>
 
