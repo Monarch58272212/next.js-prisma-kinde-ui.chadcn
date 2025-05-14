@@ -44,7 +44,7 @@ export function BlogpostCard({ data, showDelete = true }: BlogpostCardProps) {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="relative size-8 h8 overflow-hidden rounded-full">
+              <div className="relative size-8 h-8 overflow-hidden rounded-full">
                 <Image
                   src={data.authorImage}
                   alt={data.authorName}
