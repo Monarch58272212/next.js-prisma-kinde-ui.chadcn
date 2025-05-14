@@ -2,11 +2,11 @@ import { prisma } from "@/app/utils/db";
 import { updatePost } from "@/app/action";
 import { notFound } from "next/navigation";
 
-type EditPageProps = {
+interface EditPageProps {
   params: {
     id: string;
   };
-};
+}
 
 export default async function EditPage({ params }: EditPageProps) {
   const post = await prisma.blogPost.findUnique({
