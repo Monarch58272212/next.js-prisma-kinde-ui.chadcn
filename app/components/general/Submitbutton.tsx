@@ -11,6 +11,7 @@ export function Submitbutton() {
     </Button>
   );
 }
+<<<<<<< HEAD
 
 export function DeleteButton() {
   const { pending } = useFormStatus();
@@ -21,3 +22,5 @@ export function DeleteButton() {
     </Button>
   );
 }
+=======
+>>>>>>> 00d0f72f23883e23e3178aeaa32c42baabcc5ccd

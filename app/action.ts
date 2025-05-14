@@ -36,6 +36,7 @@ export async function handleSubmission(formData: FormData) {
 
   return redirect("/dashboard");
 }
+<<<<<<< HEAD
 
 export async function deletePost(formData: FormData) {
   const id = formData.get("id") as string;
@@ -78,3 +79,5 @@ export async function updatePost(formData: FormData) {
   revalidatePath("/");
   return redirect("/dashboard");
 }
+=======
+>>>>>>> 00d0f72f23883e23e3178aeaa32c42baabcc5ccd

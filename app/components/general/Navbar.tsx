@@ -27,7 +27,7 @@ export async function Navbar() {
       <div className="flex items-center justify-between gap-6">
         <Link href={"/"}>
           <h1 className="text-black text-3xl font-bold">
-            Blog<span className="text-blue-600">Christine Taran</span>
+            Blog<span className="text-blue-600">Monarch</span>
           </h1>
         </Link>
 
@@ -49,7 +49,7 @@ export async function Navbar() {
 
       {user ? (
         <div className="flex items-center gap-4">
-          <p className="font-bold text-sm">{user.given_name}</p>
+          <p>{user.given_name}</p>
           <div className="relative size-8 h8 overflow-hidden rounded-full">
             <Image
               src={user.picture ?? "/default-avatar.png"}
