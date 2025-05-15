@@ -8,7 +8,8 @@ interface EditPageProps {
   };
 }
 
-export default async function EditPage({ params }: EditPageProps) {
+export default async function EditPage(props: EditPageProps) {
+  const { params } = props; // I-destructure mo dito, hindi sa parameter
   const post = await prisma.blogPost.findUnique({
     where: { id: params.id },
   });

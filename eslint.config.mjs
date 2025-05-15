@@ -18,5 +18,4 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
-// Pag-export ng config para magamit sa ESLint
-module.exports = eslintConfig;
+export default eslintConfig;
