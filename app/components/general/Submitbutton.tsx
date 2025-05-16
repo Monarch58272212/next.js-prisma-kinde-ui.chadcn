@@ -12,7 +12,6 @@ export function Submitbutton() {
   );
 }
 
-
 export function DeleteButton() {
   const { pending } = useFormStatus();
 
@@ -23,3 +22,16 @@ export function DeleteButton() {
   );
 }
 
+export function UpdateButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button
+      className="bg-blue-900 text-amber-50"
+      type="submit"
+      disabled={pending}
+    >
+      {pending ? "Updating..." : "Update"}
+    </Button>
+  );
+}

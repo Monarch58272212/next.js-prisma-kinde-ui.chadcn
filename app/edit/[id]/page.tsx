@@ -1,6 +1,7 @@
 import { prisma } from "@/app/utils/db";
 import { updatePost } from "@/app/action";
 import { notFound } from "next/navigation";
+import { UpdateButton } from "@/app/components/general/Submitbutton";
 
 export const dynamicParams = false;
 
@@ -59,12 +60,7 @@ export default async function EditPage({
           />
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Update Post
-        </button>
+        <UpdateButton />
       </form>
     </div>
   );
