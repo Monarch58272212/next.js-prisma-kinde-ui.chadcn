@@ -2,14 +2,7 @@ import { prisma } from "@/app/utils/db";
 import { updatePost } from "@/app/action";
 import { notFound } from "next/navigation";
 
-interface EditPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function EditPage(props: EditPageProps) {
-  const { params } = props; // I-destructure mo dito, hindi sa parameter
+export default async function EditPage({ params }: { params: { id: string } }) {
   const post = await prisma.blogPost.findUnique({
     where: { id: params.id },
   });
