@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     const setupData = {
       status: "Setup complete",
       config: authConfig,
+      
     };
 
     res.status(200).json(setupData);
