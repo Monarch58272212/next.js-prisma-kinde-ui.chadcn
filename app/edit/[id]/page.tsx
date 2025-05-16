@@ -7,9 +7,9 @@ export const dynamicParams = false;
 export default async function EditPage({
   params,
 }: {
-  params: { id: string }; // Direktang object, hindi Promise
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
 
   const post = await prisma.blogPost.findUnique({
     where: { id },
