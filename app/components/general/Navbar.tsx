@@ -49,7 +49,7 @@ export async function Navbar() {
 
       {user ? (
         <div className="flex items-center gap-4">
-          <p>{user.given_name}</p>
+          <p className="font-bold text-sm">{user.given_name}</p>
           <div className="relative size-8 h8 overflow-hidden rounded-full">
             <Image
               src={user.picture ?? "/default-avatar.png"}
