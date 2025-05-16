@@ -2,7 +2,13 @@ import { prisma } from "@/app/utils/db";
 import { updatePost } from "@/app/action";
 import { notFound } from "next/navigation";
 
-export default async function EditPage({ params }: { params: { id: string } }) {
+export const dynamicParams = false;
+
+export default async function EditPage({
+  params,
+}: {
+  params: { id: string }; // Direktang object, hindi Promise
+}) {
   const { id } = params;
 
   const post = await prisma.blogPost.findUnique({
