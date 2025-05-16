@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/*import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req, res) {
   try {
@@ -20,3 +20,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Internal Server Error during setup" });
   }
 }
+*/
