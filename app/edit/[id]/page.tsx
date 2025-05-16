@@ -2,14 +2,21 @@ import { prisma } from "@/app/utils/db";
 import { updatePost } from "@/app/action";
 import { notFound } from "next/navigation";
 
-export const dynamicParams = false; // optional but helps
+export const dynamicParams = false;
 
-export default async function EditPage({ params }: { params: { id: string } }) {
+export default async function EditPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+
   const post = await prisma.blogPost.findUnique({
-    where: { id: params.id },
+    where: { id },
   });
 
   if (!post) return notFound();
+
   return (
     <div className="max-w-xl mx-auto p-4">
       <h1 className="text-xl font-bold mb-4">Edit Blog Post</h1>
