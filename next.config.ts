@@ -31,19 +31,16 @@ const nextConfig: NextConfig = {
       },
       {
         hostname: "www.facebook.com",
-
         protocol: "https",
         port: "",
       },
       {
         hostname: "unsplash.com",
-
         protocol: "https",
         port: "",
       },
       {
         hostname: "web.facebook.com",
-
         protocol: "https",
         port: "",
       },
