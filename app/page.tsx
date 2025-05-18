@@ -32,6 +32,7 @@ export default function Home() {
   return (
     <div className="p-6">
       <h1 className="text-xl font-bold tracking-tight mb-8">Latest Post</h1>
+
       <Suspense fallback={<SkeletonCard />}>
         <BlogPosts />
       </Suspense>
@@ -52,7 +53,7 @@ async function BlogPosts() {
 
 function SkeletonCard() {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 items-center justify-center">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 place-items-center">
       {Array.from({ length: 6 }).map((_, index) => (
         <div className="space-y-2" key={index}>
           <Skeleton className="h-[125px] w-[250px] rounded-xl" />

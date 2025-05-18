@@ -53,13 +53,15 @@ export default async function IdPage({ params }: { params: Params }) {
         </div>
       </div>
 
-      <div className="relative h-[400px] w-full mb-8 overflow-hidden rounded-lg ">
+      <div className="relative h-[400px] w-full mb-8 overflow-hidden flex justify-center rounded-lg ">
         <Image
           src={data.imageUrl}
           alt={data.title}
-          fill
-          className="cover"
-          priority
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="h-auto w-auto max-w-full rounded-lg object-contain"
+          unoptimized
         />
       </div>
       <Card>
